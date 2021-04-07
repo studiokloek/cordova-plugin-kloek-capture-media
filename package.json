@@ -1,0 +1,29 @@
+{
+  "name": "cordova-plugin-kloek-capture-media",
+  "version": "1.0.0",
+  "description": "Cordova Capture Plugin for Kloek",
+  "cordova": {
+    "id": "cordova-plugin-device",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studiokloek/cordova-plugin-capture-media.git"
+  },
+  "keywords": [
+    "cordova",
+    "media",
+    "capture",
+    "kloek",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/studiokloek/cordova-plugin-capture-media/issues"
+  },
+  "homepage": "https://github.com/studiokloek/cordova-plugin-capture-media#readme"
+}

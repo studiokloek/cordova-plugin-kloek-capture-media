@@ -1,0 +1,34 @@
+{
+    "name": "helloworld",
+    "displayName": "HelloCordova",
+    "version": "1.0.0",
+    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Apache Cordova Team",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "cordova-ios": "^4.4.0",
+        "cordova-plugin-compat": "^1.1.0",
+        "cordova-plugin-console": "~1.0.7",
+        "cordova-plugin-file": "^4.3.3",
+        "cordova-plugin-kloek-capture-media": "file:///Files/work/2017-kloek/cordova-plugin-capture-media",
+        "cordova-plugin-whitelist": "^1.3.2"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-console": {},
+            "cordova-plugin-kloek-capture-media": {
+                "CAMERA_USAGE_DESCRIPTION": " ",
+                "MICROPHONE_USAGE_DESCRIPTION": " ",
+                "PHOTOLIBRARY_USAGE_DESCRIPTION": " "
+            }
+        },
+        "platforms": [
+            "ios"
+        ]
+    }
+}

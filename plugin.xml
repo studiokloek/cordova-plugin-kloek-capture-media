@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-kloek-capture-media" version="1.0.0">
+  <name>Kloek capture</name>
+  <description>Cordova Capture Plugin for Kloek</description>
+  <license>Apache 2.0</license>
+  <keywords>cordova,media,capture,kloek</keywords>
+  <js-module src="www/capture.js" name="capture">
+    <clobbers target="Kloek" />
+  </js-module>
+  <!-- <js-module src="www/helpers.js" name="helpers">
+        <runs />
+    </js-module> -->
+
+  <dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>
+  <dependency id="cordova-plugin-file" version="6.0.1" />
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="KloekVideoCapture">
+        <param name="ios-package" value="KloekVideoCapture"/>
+      </feature>
+      <feature name="KloekAudioCapture">
+        <param name="ios-package" value="KloekAudioCapture"/>
+      </feature>
+    </config-file>
+    <source-file src="src/ios/KloekVideoCapture.swift" />
+    <source-file src="src/ios/KloekAudioCapture.swift" />
+    <header-file src="src/ios/KloekCapture-Bridging-Header.h" />
+
+    <framework src="CoreGraphics.framework" />
+    <framework src="MobileCoreServices.framework" />
+
+    <preference name="CAMERA_USAGE_DESCRIPTION" default=" " />
+    <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+      <string>$CAMERA_USAGE_DESCRIPTION</string>
+    </config-file>
+
+    <preference name="MICROPHONE_USAGE_DESCRIPTION" default=" " />
+    <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+      <string>$MICROPHONE_USAGE_DESCRIPTION</string>
+    </config-file>
+
+    <preference name="PHOTOLIBRARY_USAGE_DESCRIPTION" default=" " />
+    <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+      <string>$PHOTOLIBRARY_USAGE_DESCRIPTION</string>
+    </config-file>
+  </platform>
+</plugin>
